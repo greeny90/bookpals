@@ -21,20 +21,25 @@
 
         </div>
 
-        <h2>Sampling of Available Books</h2>
+        <h2></h2>
+        <h2>Borrowed Books</h2>
 
         <ul>
           <% books.forEach(function (f) { %>
 
-            <li><%= f.book_title %>,  by <%= f.author_first_name %> <%= f.author_last_name %></li>
+            <li><%= f.book_title %>,  by <%= f.author_first_name %> <%= f.author_last_name %>, ISBN: <%= f.isbn %>, Due Date: <%= f.due_date %></li>
 
           <% })%>
 
         </ul>
+
+        <h2>Users by Region</h2>
+
+
       </div>
 
       <div class="col-4">
-        <h2>Create Fire</h2>
+        <h2>Create Book</h2>
 
         <form action="/books/create" method="POST">
           <div>
@@ -55,6 +60,7 @@
                 name="book_title"
                 type="text"
                 class="form-control"
+                value="Book Name"
             /></label>
           </div>
           <div>
@@ -63,8 +69,9 @@
               <input
                 required="true"
                 name="year_of_publication"
-                type="number"
+                type="text"
                 class="form-control"
+                value="1900"
             /></label>
           </div>
           
@@ -72,7 +79,40 @@
           <button type="submit" class="btn btn-primary">Add Book</button>
         </form>
 
+        <h2></h2>
+        <h2></h2>
+        <h2>Delete Book</h2>
+
+        <form action="/books/delete" method="POST">
+          <div>
+            <label class="form-label"
+              >ISBN:
+              <input
+                required="true"
+                name="isbn"
+                type="text"
+                class="form-control"
+            /></label>
+          </div>
+          <div>
+            <label class="form-label"
+              >Book Title:
+              <input
+                required="true"
+                name="book_title"
+                type="text"
+                class="form-control"
+                value="Book Name"
+            /></label>
+          </div>
+          
+          
+          <button type="submit" class="btn btn-danger">Delete Book</button>
+        </form>
+
       </div>
+
+      
 
     </main>
     <footer>
