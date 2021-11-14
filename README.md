@@ -15,3 +15,7 @@ Semaa and Yvette are building a book swapping management system that allows book
 ![Website Screenshot](https://lucid.app/publicSegments/view/0b6b5c45-dc42-498f-81e8-db18698577d1/image.png)
 
 
+
+Changes Proposed By Misha
+Very good job, was able to successfully add and delete books. 
+Maybe if there was a search filter, I could view the added book in the list but overall a very good attempt.
